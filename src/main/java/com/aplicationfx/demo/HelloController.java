@@ -27,27 +27,33 @@ public class HelloController  {
     private RadioButton radioButton2;
     @FXML
     private RadioButton radioButton3;
+    @FXML
+    private RadioButton radioButton4;
+
     Calculator calculator = new Calculator();
 
 
     @FXML
     protected void get_procent() {
-       if (radioButton1.isSelected()) {
-           calculator.setPercent(5.0);
+        if (radioButton1.isSelected()) {
+            calculator.setPercent(5.0);
 
-       } else if (radioButton2.isSelected()) {
-           calculator.setPercent(7.0);
+        } else if (radioButton2.isSelected()) {
+            calculator.setPercent(7.0);
 
-       } else if (radioButton3.isSelected()) {
-           calculator.setPercent(10.0);
-
-       }
-
-    }
-    @FXML
-    protected void onHelloButtonClick() {
-        calculator.setNum(Double.valueOf(textField1.getText()));
-        textField2.setText(String.valueOf(calculator.calc()));
+        } else if (radioButton3.isSelected()) {
+            calculator.setPercent(10.0);
+        } else if (radioButton4.isSelected()) {
+            calculator.setPercent(20.0);
+        }
     }
 
-}
+
+
+            @FXML
+            protected void onHelloButtonClick () {
+                calculator.setNum(Double.valueOf(textField1.getText()));
+                textField2.setText(String.valueOf(calculator.calc()));
+            }
+
+        }

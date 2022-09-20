@@ -1,16 +1,18 @@
 package com.aplicationfx.demo.model;
 
 public class Calculator {
-    private Double n;
+    private Double num;
+
     private Double percent;
-    private Double result;
+    private Double res;
+
 
     public Double getNum() {
-        return n;
+        return num;
     }
 
     public void setNum(Double num) {
-        this.n = n;
+        this.num = num;
     }
 
     public Double getPercent() {
@@ -22,8 +24,8 @@ public class Calculator {
     }
 
     public Double calc() {
-        result = (n / 100) * percent ;
+        res = (num / 100) * percent ;
 
-        return result;
+        return res;
     }
 }
